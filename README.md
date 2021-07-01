@@ -13,7 +13,7 @@ Install my-project with git
 
 ```
 
-git clone https://github.com/Operation-Falcon/sectrails
+git clone https://github.com/Deepanjalkumar/sectrails.git
 
 cd sectrails
 
