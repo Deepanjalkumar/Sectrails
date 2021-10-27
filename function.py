@@ -14,7 +14,7 @@ def subdomain(domain, api, output):
                 file.writelines("%s%s%s\n"% (data[i], ".", domain))
                 print("%s%s%s\n" %(data[i], ".", domain))
             except Exception as e:
-                pass
+                print(e)
 
 def tags(domain, api, output):
     headers={"Accept":"application/json",
@@ -27,7 +27,7 @@ def tags(domain, api, output):
                 file.writelines("%s\n" % data[i])
                 print("%s\n" % data[i])
             except Exception as e:
-                pass
+                print(e)
 
 def details(domain, api, output):
     headers = {"Accept": "application/json",
@@ -41,42 +41,42 @@ def details(domain, api, output):
                 file.writelines("%s\n" % data["txt"]["values"][i]["value"])
                 print("%s\n" % data["txt"]["values"][i]["value"])
             except Exception as e:\
-                    pass
+                    print(e)
         file.writelines("SOA:\n")
         for i in range(0, len(data)):
             try:
                 file.writelines("%s\n" % data["txt"]["values"][i]["value"])
                 print("%s\n" % data["txt"]["values"][i]["value"])
             except Exception as e: \
-                    pass
+                    print(e)
         file.writelines("NS:\n")
         for i in range(0, len(data)):
             try:
                 file.writelines("%s\n" % data["txt"]["values"][i]["value"])
                 print("%s\n" % data["txt"]["values"][i]["value"])
             except Exception as e:\
-                    pass
+                    print(e)
         file.writelines("MX:\n")
         for i in range(0, len(data)):
             try:
                 file.writelines("%s\n" % data["txt"]["values"][i]["value"])
                 print("%s\n" % data["txt"]["values"][i]["value"])
             except Exception as e:\
-                    pass
+                    print(e)
         file.writelines("AAAA:\n")
         for i in range(0, len(data)):
             try:
                 file.writelines("%s\n" % data["txt"]["values"][i]["value"])
                 print("%s\n" % data["txt"]["values"][i]["value"])
             except Exception as e:\
-                    pass
+                    print(e)
         file.writelines("A:\n")
         for i in range(0, len(data)):
             try:
                 file.writelines("%s\n" % data["txt"]["values"][i]["value"])
                 print("%s\n" % data["txt"]["values"][i]["value"])
             except Exception as e:\
-                    pass
+                    print(e)
 
 def dns(domain, api, output):
     headers={"Accept":"application/json",
@@ -90,7 +90,7 @@ def dns(domain, api, output):
                     file.writelines("%s\n" % data[i]["values"][j]["ip"])
                     print("%s\n" % data[i]["values"][j]["ip"])
                 except Exception as e:
-                    pass
+                    print(e)
 
 
 
@@ -126,7 +126,7 @@ def whois(domain, api, output):
                     print("%s\n" % data[i]["contact"][j]["city"])
                     print("\n\n")
                 except Exception as e:
-                    pass
+                    print(e)
 
 
 def neighbours(ip, api, output):
@@ -140,7 +140,7 @@ def neighbours(ip, api, output):
                 file.writelines("%s\n" % (data[i]["ip"]))
                 print("%s\n" % (data[i]["ip"]))
             except Exception as e:
-                pass
+                print(e)
 
 
 
